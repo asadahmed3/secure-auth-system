@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+  <h2>Welcome, {{ username }}!</h2>
+  <p>You are logged in.</p>
+  
+  <form method="POST" action="{{ url_for('logout') }}" style="display:inline;">
+    <!-- CSRF token to protect against cross-site request forgery -->
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit">Logout</button>
+  </form>
+
+
+</body>
+</html>
